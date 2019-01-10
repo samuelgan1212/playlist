@@ -1,16 +1,26 @@
 /* global $ */
 
 // BELOW Update the songs array with four of your favorites songs.
-var songs = [];
+var songs = ["Yes or Yes","Dance the Night Away","Skyfall","Way Back Home","Me gusta Tu","The best thing i ever did"];
 // BELOW Add 4 More arrays to store images_links, atists, song lengths, and links for each song
 // Make sure they match the same order as your array above
+var imgurl=["https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/Twice_%E2%80%93_Yes_or_Yes.png/220px-Twice_%E2%80%93_Yes_or_Yes.png",
+            "https://www.billboard.com/files/styles/article_main_image/public/media/TWICE-summer-nights-album-photo-2018-billboard-1548.jpg",
+            "https://i.scdn.co/image/6c1ff4be73ca0342b351638a69043139815f5287",
+            "https://i.ytimg.com/vi/c0QTIsdrStI/hqdefault.jpg",
+            "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Flower-Bud.jpg/220px-Flower-Bud.jpg",
+            "https://www.billboard.com/files/styles/article_main_image/public/media/TWICE-pr-ch-billboard-1548.jpg"];
+var artist=["Twice","Twice","Damiano","Shaun","Gfriend","Twice"];
+var songlengths=["4:29","4:09","4:14","3:34","4:11","3:33"];
+var links=["https://www.youtube.com/watch?v=mAKsZ26SabQ",
+            "https://www.youtube.com/watch?v=Fm5iP0S1z9w",
+            "https://www.youtube.com/watch?v=Ipyn8qqXqGQ",
+            "https://www.youtube.com/watch?v=S5yuugHlLBo",
+            "https://www.youtube.com/watch?v=oixRBiOteWY",
+            "https://www.youtube.com/watch?v=CfUGjK6gGgs"];
+// BELOW Use forEach Loop to display the data from each of your array's in the correct div
 
 
-
-
-    // BELOW Use forEach Loop to display the data from each of your array's in the correct div
-
-}
 
 function emptySongInfo(){
     $("#songs").empty();
