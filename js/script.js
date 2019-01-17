@@ -19,9 +19,25 @@ var links=["https://www.youtube.com/watch?v=mAKsZ26SabQ",
             "https://www.youtube.com/watch?v=oixRBiOteWY",
             "https://www.youtube.com/watch?v=CfUGjK6gGgs"];
 // BELOW Use forEach Loop to display the data from each of your array's in the correct div
+        songs.forEach(function(eachsong, index){
+            console.log(index);
+            $("#songs").append("<p>"+eachsong+"</p>");
+        });
+         imgurl.forEach(function(eachimage){
+            $("#images").append("<img src="+eachimage+">");
+        });
+         artist.forEach(function(eachartist){
+            $("#artists").append("<p>"+eachartist+"</p>");
+        });
+        songlengths.forEach(function(eachlength){
+            $("#lengths").append("<p>"+eachlength+"</p>");
+        });
+         links.forEach(function(eachlink){
+            $("#links").append("<a href="+eachlink+">Song Link</a>");
+        });
 
 
-
+console.log("9876tyguhio89ygvb");
 function emptySongInfo(){
     $("#songs").empty();
     // Use jQuery to empty all of the remaining divs
@@ -39,7 +55,7 @@ function addSongInfo(){
 $("#add").click(function() {
     emptySongInfo();
     addSongInfo();
-    displaySongInfo();
+  
 });
 
-displaySongInfo();
+
