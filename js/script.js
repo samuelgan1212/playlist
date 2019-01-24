@@ -19,6 +19,8 @@ var links=["https://www.youtube.com/watch?v=mAKsZ26SabQ",
             "https://www.youtube.com/watch?v=oixRBiOteWY",
             "https://www.youtube.com/watch?v=CfUGjK6gGgs"];
 // BELOW Use forEach Loop to display the data from each of your array's in the correct div
+       songmethod();
+       function songmethod(){
         songs.forEach(function(eachsong, index){
             console.log(index);
             $("#songs").append("<p>"+eachsong+"</p>");
@@ -35,11 +37,14 @@ var links=["https://www.youtube.com/watch?v=mAKsZ26SabQ",
          links.forEach(function(eachlink){
             $("#links").append("<a href="+eachlink+">Song Link</a>");
         });
+}
 
-
-console.log("9876tyguhio89ygvb");
 function emptySongInfo(){
     $("#songs").empty();
+     $("#artists").empty();
+      $("#lengths").empty();
+       $("#images").empty();
+        $("#links").empty();
     // Use jQuery to empty all of the remaining divs
 
 
@@ -48,14 +53,40 @@ function emptySongInfo(){
 
 function addSongInfo(){
     // BELOW write the code to add new items to each of the arrays.
-
+    var inputsong=$("#song").val();
+    var inputartist=$("#artist").val();
+    var inputlength=$("#length").val();
+    var inputimage=$("#image").val();
+    var inputlink=$("#link").val();
+    
+    songs.push(inputsong);
+    imgurl.push(inputimage);
+    artist.push(inputartist);
+    songlengths.push(inputlength);
+    links.push(inputlink);
+    
+     
+ songmethod();
 
 }
 
+function deleteSonginfo(){
+    var deletenum= $("#deletedsong").val();
+    var realdeletenum=deletenum-1
+     songs.splice(realdeletenum,1);
+    imgurl.splice(realdeletenum,1);
+    artist.splice(realdeletenum,1);
+    songlengths.splice(realdeletenum,1);
+    links.splice(realdeletenum,1);
+    songmethod();
+    
+}
 $("#add").click(function() {
     emptySongInfo();
     addSongInfo();
   
 });
-
-
+$("#delete").click(function(){
+    emptySongInfo();
+    deleteSonginfo();
+});
